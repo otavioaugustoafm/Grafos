@@ -31,9 +31,9 @@ class Grafo {
                 auto busca = find(listaAdjacencia[v1].begin(), listaAdjacencia[v1].end(), v2);
                 if (busca != listaAdjacencia[v1].end()) {
                     cout << "Aresta existente." << endl;
+                    return;
                 }
                 listaAdjacencia[v1].push_back(v2);
-                listaAdjacencia[v2].push_back(v1);
             }
             cout << "Arestas inseridas." << endl;
         }
@@ -81,6 +81,7 @@ int main() {
     cout << "Digite o vertice de inicio para a Busca de Profundidade:" << endl;
     char l1 = ' ';
     cin >> l1;
-    int v1 = 'A' - l1;
+    int v1 = l1 - 'A';
+    cout << v1;
     grafo.dfs(v1);
 }
