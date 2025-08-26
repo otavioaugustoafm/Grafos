@@ -25,6 +25,7 @@ class Grafo {
                 }
             }
             listaAdjacencia[v1].push_back(v2);
+            listaAdjacencia[v2].push_back(v1);
         }
 
         void printarGrafo() {
@@ -94,7 +95,7 @@ int main() {
     cout << endl << "Printando grafo:" << endl;
     grafo.printarGrafo();
 
-    cout << "Digite qual vertice quer iniciar a busca em profundidade?" << endl;
+    cout << "Digite qual vertice quer iniciar a busca em profundidade:" << endl;
     cin >> l1;
     v1 = l1 - 'A';
     if (v1 < 0 || v1 > numVertices - 1) {
